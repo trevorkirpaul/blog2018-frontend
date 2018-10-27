@@ -1,9 +1,26 @@
 import React, { Component } from 'react';
+import { request } from 'graphql-request';
 
 import TitlePanel from 'components/TitlePanel';
 import Button from 'components/Button';
 
 import './CreatePost.css';
+
+const createPostQuery = values =>
+  `mutation {
+      createPost(
+        title: "${values.title}",
+        body: "${values.body}",
+        author: "${values.author}"
+      ) {
+        id,
+        title,
+        author {
+          id,
+          firstName
+        }
+      }
+  }`;
 
 class CreatePost extends Component {
   constructor(props) {
@@ -17,6 +34,12 @@ class CreatePost extends Component {
 
   handleOnChange = ({ target: { value, name } }) => {
     return this.setState(() => ({ [name]: value }));
+  };
+
+  handleSubmit = () => {
+    return request('http://localhost:3001/graphql', createPostQuery(this.state))
+      .then(() => this.props.history.push('/'))
+      .catch(err => console.log('ERROR', err));
   };
   render() {
     const { title, body } = this.state;
@@ -40,8 +63,8 @@ class CreatePost extends Component {
             rows="10"
           />
         </div>
-        <div class="CreatePost_Actions">
-          <Button>Create</Button>
+        <div className="CreatePost_Actions">
+          <Button onClick={this.handleSubmit}>Create</Button>
         </div>
       </div>
     );
