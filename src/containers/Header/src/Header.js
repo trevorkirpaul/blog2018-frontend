@@ -18,6 +18,12 @@ class Header extends Component {
                 <span>Posts</span>
               </Link>
             </li>
+
+            <li>
+              <Link to="/create-post">
+                <span>Create Post</span>
+              </Link>
+            </li>
           </ul>
         </nav>
       </div>

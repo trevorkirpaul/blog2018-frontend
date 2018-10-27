@@ -1,0 +1,35 @@
+.CreatePost .CreatePost_Form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+
+.CreatePost .CreatePost_Form input {
+  max-width: 400px;
+  margin-bottom: 15px;
+  color: #e8e8e8;
+  display: inline-block;
+  background: #383838;
+  padding: 10px 15px;
+  border: none;
+  outline-color: palevioletred;
+  font-family: "Roboto", sans-serif;
+}
+
+.CreatePost .CreatePost_Form textarea {
+  max-width: 400px;
+  resize: none;
+  color: #e8e8e8;
+  display: inline-block;
+  background: #383838;
+  padding: 10px 15px;
+  outline-color: palevioletred;
+  font-family: "Roboto", sans-serif;
+}
+
+.CreatePost .CreatePost_Actions {
+  max-width: 600px;
+  margin: 0 auto;
+}
