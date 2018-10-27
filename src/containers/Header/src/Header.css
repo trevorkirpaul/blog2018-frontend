@@ -1,0 +1,31 @@
+.Header {
+  background: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 25px;
+  color: #e8e8e8;
+}
+
+.Header .Header_Logo {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.Header .Header_Logo .Header_Logo_Bold {
+  font-weight: 300;
+}
+
+.Header nav ul {
+  list-style: none;
+}
+
+.Header nav ul li a {
+  text-decoration: none;
+  color: palevioletred;
+}
+
+.Header nav ul li a:hover {
+  color: white;
+}

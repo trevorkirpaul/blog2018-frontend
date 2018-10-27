@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { request } from 'graphql-request';
 
 import Post from 'components/Post';
+import TitlePanel from 'components/TitlePanel';
 
 const fetchPostsQuery = `{
   posts {
@@ -41,7 +42,7 @@ class Blogs extends Component {
 
     return (
       <div className="Blogs">
-        <h1>Posts</h1>
+        <TitlePanel header="Posts" subHeader="A collection of all Posts" />
         {hasError && <span>{error}</span>}
         {loading && <span>loading...</span>}
         {posts && posts.map(post => <Post key={post.id} {...post} />)}

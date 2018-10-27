@@ -1,16 +1,18 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import Blogs from './containers/Blogs'
+import Blogs from './containers/Blogs';
+import Header from './containers/Header';
 
 const Router = () => (
-  <React.Fragment>
-    <BrowserRouter>
+  <BrowserRouter>
+    <React.Fragment>
+      <Header />
       <Switch>
         <Route path="/" exact component={Blogs} />
       </Switch>
-    </BrowserRouter>
-  </React.Fragment>
+    </React.Fragment>
+  </BrowserRouter>
 );
 
 export default Router;

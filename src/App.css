@@ -1,10 +1,10 @@
 .App {
   font-family: "Roboto", sans-serif;
-  max-width: 600px;
-  margin: 25px auto;
 }
 
 .App .Post {
+  max-width: 600px;
+  margin: 25px auto;
   border-left: 3px solid plum;
   padding-left: 25px;
 }
