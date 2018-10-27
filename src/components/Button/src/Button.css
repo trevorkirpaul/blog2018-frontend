@@ -1,0 +1,23 @@
+.Button {
+  background: #383838;
+  color: #e8e8e8;
+  border: none;
+  padding: 5px 10px;
+}
+
+.Button:hover {
+  cursor: pointer;
+  color: palevioletred;
+}
+
+.Button_Disabled {
+  background: #585858;
+  color: #989898;
+  border: none;
+  padding: 5px 10px;
+  opacity: 0.9;
+}
+
+.Button_Disabled:hover {
+  cursor: not-allowed;
+}
